@@ -3,6 +3,7 @@ import { LanguageContext } from "../home/LanguageContext";
 import { Translation } from "../../Translation";
 import "../../styles/memberships.css";
 import lux_logo from "../../assets/lux_logo.png";
+import { Link } from "@mui/material";
 
 /**
  * The Memberships component displays information about different membership plans,
@@ -44,6 +45,10 @@ export const Memberships = () => {
       ],
     },
   ];
+
+  const handleRedirect = () => {
+    window.location.href = "https://luxinternational.us/auth/login";
+  };
   return (
     <div className="container-inner">
       <div className="memberships">
@@ -68,9 +73,9 @@ export const Memberships = () => {
                     <span key={index}>{feature}</span>
                   ))}
                 </div>
-                <button className="btn-buy">
-                  {Translation[language].membershipButton}
-                </button>
+                  <button onClick={handleRedirect} className="btn-buy">
+                    {Translation[language].membershipButton}
+                  </button>
               </div>
             </div>
           ))}

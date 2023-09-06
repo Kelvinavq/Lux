@@ -146,7 +146,7 @@ const Slider = ({ data }) => {
                     <p>{item.content3}</p>
                     <p>{item.content4}</p>
                     <div className="link">
-                      <a href="#">{Translation[language].FCbutton}</a>
+                      <a href="https://luxinternational.us/auth/login">{Translation[language].FCbutton}</a>
                     </div>
                   </div>
                 </div>
@@ -190,6 +190,7 @@ const FeaturedCourses = () => {
       content2: Translation[language].FCcontentOne,
       content3: Translation[language].FCcontentTwo,
       content4: Translation[language].FCcontentThree,
+      
     },
     {
       imgSrc: ingles,

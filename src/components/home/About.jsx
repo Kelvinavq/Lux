@@ -7,6 +7,7 @@ import about_dos from "../../assets/img/about_dos.webp";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import "../../styles/about.css";
 
+import { Link } from "react-router-dom";
 /**
  * The About component represents the about section of the homepage.
  * It displays information about the website or application.
@@ -15,6 +16,10 @@ import "../../styles/about.css";
 // THE BUTTON SHOULD REDIRECT THE USER TO REGISTER
 export const About = () => {
   const { language } = useContext(LanguageContext);
+
+  const handleRedirect = () => {
+    window.location.href = "https://luxinternational.us/auth/login";
+  };
   return (
     <div className="container-inner">
       <section className="about">
@@ -30,14 +35,15 @@ export const About = () => {
           <p>{Translation[language].aboutTextTwo}</p>
 
           {/* THE BUTTON SHOULD REDIRECT THE USER TO REGISTER IN MLM */}
-          <button>
-            {Translation[language].buttonAbout}
-            <div className="circulo">
-              <NorthEastIcon />
-            </div>
-          </button>
+          <Link to="https://luxinternational.us/auth/login">
+            <button>
+              {Translation[language].buttonAbout}
+              <div className="circulo">
+                <NorthEastIcon />
+              </div>
+            </button>
+          </Link>
         </div>
-
         {/* Images */}
         <div className="img">
           <img src={about_uno} alt="image about" />
