@@ -1,0 +1,384 @@
+/* courses */
+.container-courses {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-courses .texts {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.container-courses .texts h2 {
+  color: var(--blanco);
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+.container-courses .texts p {
+  color: var(--blanco);
+  line-height: 24px;
+}
+
+.container-courses .texts strong {
+  color: var(--morado);
+}
+.carousel .slider {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel .items {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel .item {
+  flex: 0 0 300px;
+  height: 420px;
+  margin-right: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.carousel .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel .item.active img {
+  transform: scale(1.1);
+}
+
+.carousel .info-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.carousel .item.active ~ .info-container {
+  transform: translateX(0);
+}
+
+.carousel .info-content {
+  width: 100%;
+}
+
+.carousel .controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  overflow-y: hidden;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper .carousel {
+  padding: 50px 10px;
+}
+.wrapper svg {
+  top: 50%;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  color: var(--morado);
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  z-index: 99;
+}
+.wrapper svg:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper svg:first-child {
+  left: -10px;
+}
+.wrapper svg:last-child {
+  right: 0;
+}
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img-course) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 440px;
+  list-style: none;
+  cursor: pointer;
+  flex-direction: column;
+  border-radius: 30px;
+  overflow: visible;
+}
+.carousel .card .img-course {
+  height: 100%;
+  width: 100%;
+}
+.card .img-course img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+.carousel .card .title {
+  background: rgba(0, 0, 0, 0.479);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.1em;
+  color: white;
+  margin-left: 12px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carousel .card span {
+  color: #6a6d78;
+  font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+.carousel .card {
+  position: relative;
+}
+
+.carousel .content-course {
+  height: 100%;
+  border-radius: 30PX;
+  width: 100%;
+  position: absolute;
+  transition: transform 0.5s ease;
+  z-index: -1;
+  background: var(--blanco);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .container-content {
+  width: 90%;
+  height: 98%;
+  color: var(--oscuro-dos);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.carousel .container-content .badge span {
+  background: var(--morado);
+  padding: 8px 15px;
+  font-size: 1em;
+  border-radius: 20px;
+  color: var(--blanco);
+}
+
+.carousel .container-content h2 {
+  text-align: left;
+  margin: 0;
+  margin-top: 10px;
+  color: var(--oscuro-dos);
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.carousel .container-content p {
+  color: var(--oscuro-dos);
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 23px;
+  margin: 0;
+  font-size: .9em;
+}
+
+.carousel .container-content .link{
+  margin-top: 10px;
+}
+
+.carousel .container-content a {
+  border: 2px solid var(--morado);
+  padding: 10px 50px;
+  border-radius: 20px;
+  color: var(--morado);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.carousel .container-content a:hover {
+  transition: all 0.4s ease;
+  background: var(--morado);
+  color: var(--blanco);
+}
+
+.carousel .card:hover .img-course img {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.carousel .card:hover .title {
+  border-radius: 0;
+  border-bottom-left-radius: 30px;
+  transition: all 0.4s ease-in-out;
+}
+.carousel .card:hover .content-course {
+  z-index: 999;
+  transform: translateX(100%);
+  transition: all 0.4s ease-in-out;
+  background: var(--blanco);
+  border-radius: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1400px) {
+  .container-courses .texts {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1240px) {
+  .container-courses{
+    margin-top: -100px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .container-courses .texts {
+    width: 100%;
+  }
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+
+  .carousel .card {
+    height: 450px !important;
+  }
+
+
+  .carousel .card .img-course {
+    border-radius: 30px;
+  }
+
+  .carousel .card .img-course img {
+    border-radius: 30px !important;
+  }
+
+  .carousel .card .title {
+    border-bottom-left-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+  }
+
+  .carousel .content-course {
+    height: 100%;
+    z-index: 999 !important;
+    background: white;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  .carousel .card:hover .content-course {
+    opacity: 1;
+    transform: translateY(0);
+    border-radius: 30px !important;
+  }
+}
+
+.carousel .card:last-child{
+  height: 0;
+  background: transparent;
+  
+}
+
+.carousel .card:last-child .content-course{ 
+    display: none;
+}
+
+.carousel .card:last-child .container-content{ 
+  display: none;
+}
+
+.carousel .card:last-child .title{
+  display: none;
+}

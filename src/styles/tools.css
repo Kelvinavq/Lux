@@ -1,0 +1,159 @@
+.content-tools {
+  width: 95%;
+}
+
+.container-tools {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  place-items: center;
+  gap: 20px;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 20px;
+  margin: 50px 0;
+}
+
+
+.form-tools {
+  width: 100%;
+}
+
+.form-tools .card .contenido {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  place-items: center;
+}
+
+.form-tools .card .contenido .icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-tools .card .contenido .icon svg {
+  font-size: 55px;
+  color: var(--morado);
+}
+
+.form-tools .card .contenido .texts h2 {
+  margin: 0;
+}
+
+.form-tools .card .contenido .texts p {
+  margin: 0;
+}
+
+.form-tools .card .contenido .texts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-tools input[type="file"] {
+  display: none;
+  opacity: 0;
+}
+
+.form-tools .grupo-input {
+  width: 100%;
+}
+
+.form-tools .grupo-input button {
+  width: 100%;
+  height: 45px;
+  color: var(--blanco);
+  font-weight: 600;
+  cursor: pointer;
+  max-width: 100%;
+  background: transparent;
+  border: 1px dashed var(--blanco);
+  border-radius: 30px;
+}
+
+.form-tools .grupo-input span{
+ padding-right: -120px;
+}
+
+
+
+.content-tools .list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-tools .list .items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.content-tools .list .items .item {
+  width: 100%;
+  height: 60px;
+  background: var(--oscuro-dos);
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.content-tools .list .items .item .left {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 20px;
+}
+
+.content-tools .list .items .item .left .number {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--oscuro);
+  border-radius: 20px;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  transition: all 0.4s;
+}
+
+.content-tools .list .items .item:hover .left .number {
+  transition: all 0.4s;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1), -1px -1px 6px rgba(20, 20, 20, 0.4);
+  color: var(--morado-dos);
+}
+
+.content-tools .list .items .item .left .number span {
+  font-size: 1.2em;
+}
+
+.content-tools .list .items .item div p {
+  width: 160px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.content-tools .item button{
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--morado);
+  transition: all 0.4s;
+  margin-right: 10px;
+}
+.content-tools .item button:hover{
+  transition: all 0.4s;
+  color: var(--morado-dos);
+}

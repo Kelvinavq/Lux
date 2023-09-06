@@ -1,0 +1,272 @@
+.memberships{
+  width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.memberships .texts {
+  width: 70%;
+  text-align: center;
+}
+
+.memberships .texts h2 {
+  color: var(--blanco);
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+.memberships .texts p {
+  color: var(--blanco);
+  line-height: 24px;
+}
+
+.memberships .texts strong {
+  color: var(--morado);
+}
+
+.cards-memberships {
+    width: 100%;
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.cards-memberships .membership {
+  font-family: Lato, sans-serif;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: var(--oscuro);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+
+  flex: 1 1 300px; 
+  max-width: 300px; 
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.cards-memberships .membership .logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  filter: brightness(0);
+}
+
+.cards-memberships .membership .logo img {
+  max-width: 80px;
+}
+
+.cards-memberships .membership:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--morado);
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.cards-memberships .membership:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+.cards-memberships .title {
+  position: relative;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-top: 12px;
+  font-size: 1.8em;
+}
+
+.cards-memberships .bg-title {
+  font-size: 4.8em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.04);
+  position: absolute;
+  max-width: 120%;
+  top: -110%;
+  transition: 0.6s;
+}
+
+.cards-memberships .membership:hover .bg-title {
+  transform: translateY(60%);
+}
+
+.cards-memberships .photo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.cards-memberships .membership:hover .photo {
+  top: 0%;
+  transform: translateY(0%);
+}
+
+.cards-memberships .photo img {
+  position: absolute;
+  width: 220px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  transition: 0.5s;
+}
+
+.cards-memberships .membership:hover .photo img {
+  width: 260px;
+  top: 56%;
+}
+
+.cards-memberships .content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 5;
+}
+
+.cards-memberships .membership:first-child:hover .content {
+  height: 190px;
+  z-index: 100;
+}
+
+.cards-memberships .membership:nth-child(2):hover .content {
+  height: 300px;
+  z-index: 100;
+}
+
+.cards-memberships .membership:nth-child(3):hover .content {
+  height: 300px;
+  z-index: 100;
+}
+
+.cards-memberships .feature {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cards-memberships .membership:hover .feature {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.cards-memberships .feature div {
+  color: var(--blanco);
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.cards-memberships .feature span {
+  min-width: 20px;
+  padding: 0 4px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 1em;
+  display: inline-block;
+  color: var(--blanco);
+  margin: 0 5px;
+  transition: 0.4s;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cards-memberships .feature span:hover {
+  color: #000;
+  background: var(--morado);
+}
+
+.cards-memberships .btn-buy {
+  display: inline-block;
+  padding: 10px 30px;
+  background: var(--morado);
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--blanco);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.cards-memberships .btn-buy:hover{
+  background: var(--morado-dos)!important;
+}
+
+.cards-memberships .membership:hover .btn-buy {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.cards-memberships .membership:hover .btn-buy:hover {
+  background: var(--morado);
+  transition-delay: 0;
+  transition: 0.05s;
+}
+
+
+.cards-memberships .size span {
+  cursor: pointer;
+  z-index: 50;
+}
+
+@media (max-width: 1400px) {
+  .memberships .texts  {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1240px) {
+  .memberships{
+    margin-top: -100px;
+  }
+}
+
+
+@media (max-width: 620px) {
+  .memberships .texts  {
+    width: 100%;
+  }
+
+  .cards-memberships .membership {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cards-memberships .membership {
+    max-width: 100%;
+  }
+}

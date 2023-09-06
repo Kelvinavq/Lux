@@ -1,0 +1,352 @@
+.container-lecture {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+/* video */
+
+.Player iframe {
+  width: 95% !important;
+  height: 95% !important;
+  background-image: url("../assets/lux_logo.png");
+  background-position: center;
+  background-repeat: repeat;
+  border-radius: 30px;
+  aspect-ratio: 16 /9 !important;
+  margin: 20px;
+  border: none;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1), -1px -1px 6px rgba(20, 20, 20, 0.4);
+}
+/* video */
+
+/* videos list */
+
+.container-lecture .content-lecture {
+  width: 100%;
+  height: auto;
+}
+
+.container-lecture .content-lecture .video-list {
+  margin: 20px;
+}
+
+.container-lecture .content-lecture .video-list .btn-prev {
+  width: 100%;
+}
+
+.container-lecture .content-lecture .video-list .btn-prev button {
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  border: 2px solid var(--morado);
+  background: transparent;
+  cursor: pointer;
+  color: var(--morado);
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.container-lecture .content-lecture .video-list .btn-prev button:hover {
+  transition: all 0.5s;
+  border: 2px solid var(--morado-dos);
+  background: var(--morado-dos);
+  color: var(--blanco);
+}
+
+.container-lecture .content-lecture .video-list .list {
+  width: 100%;
+  max-height: 680px;
+}
+
+.container-lecture .content-lecture .video-list .list .box-list {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  border: 2px solid var(--oscuro-dos);
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-lecture .content-lecture .video-list .list .box-list .box-content {
+  width: 95%;
+  margin: 10px 0;
+}
+
+.video-list .list .box-list .box-content .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-list .list .box-list .box-content .videos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.video-list .list .box-list .box-content .videos .video {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.video-list .list .box-list .box-content .videos .video div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.video-list .list .box-list .box-content .videos .video button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--morado);
+  color: var(--morado);
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.video-list .list .box-list .box-content .videos .video button:hover {
+  transition: all 0.4s;
+  background: var(--morado-dos);
+  border: 1px solid var(--morado-dos);
+  color: var(--blanco);
+}
+
+.video-list .list .box-list .box-content .videos .video span {
+  font-size: 0.9em;
+  max-width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.video-list .list .box-list .box-content .videos .video p {
+  font-size: 0.8em;
+  color: var(--oscuro-dos);
+  max-width: 80px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* videos list */
+
+/* tabbar */
+
+/* Estilos para la barra de pestañas */
+.tab-bar {
+  display: flex;
+  border: 2px solid var(--oscuro-dos);
+  margin: 20px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+/* Estilos para las pestañas */
+.tab {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab:not(.tab:last-child) {
+  border-right: 2px solid var(--oscuro-dos);
+}
+
+.tab.active:first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.tab.active:last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Estilo para pestaña activa */
+.tab.active {
+  background-color: var(--morado);
+  color: var(--blanco);
+}
+
+/* Estilos para el contenido de las pestañas */
+.tab-content {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-tab {
+  width: 95%;
+  display: flex;
+  height: auto;
+}
+
+.tab-content .teacher {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+.tab-content .teacher .img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.tab-content .teacher .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tab-content .teacher .name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tab-content .teacher .name h4 {
+  color: var(--morado);
+}
+.tab-content .video-list{
+  width: 100%;
+}
+.tab-content .video-list .btn-prev {
+  display: none;
+}
+
+.tab-content .video-list .videos .video span {
+  font-size: 0.9em;
+  max-width: 300px !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* tabbar */
+
+/* progress */
+
+.progress-container {
+  height: 200px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px;
+}
+
+.progress-container .box-progress {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--oscuro-dos);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.box-progress .CircularProgressbar {
+  max-width: 100px;
+  position: relative;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: var(--morado);
+}
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: var(--oscuro-dos);
+  stroke-linecap: round;
+}
+
+.progress-bar {
+  position: relative;
+  display: flex;
+}
+
+.progress-bar svg {
+  position: absolute;
+  color: var(--morado);
+  font-size: 50px;
+}
+/* progress */
+
+@media (max-width: 980px) {
+  .container-lecture {
+    grid-template-columns: 1fr;
+  }
+  .video-list {
+    display: none;
+  }
+
+  .tab-content .video-list {
+    display: block;
+  }
+
+  .video button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .container-lecture {
+    width: 100%;
+  }
+
+  .Player iframe {
+    margin: 0;
+    margin-right: 0 !important;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .container-tabBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tab-bar {
+    width: 95%;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 0.8em;
+  }
+
+  .progress-container {
+    margin: 50px 10px;
+    padding: 0;
+  }
+
+  .tab-content {
+    padding: 0;
+    overflow: hidden;
+  }
+  .tab-content .video-list .videos .video span {
+    font-size: 0.9em;
+    max-width: 200px !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

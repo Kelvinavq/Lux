@@ -1,0 +1,182 @@
+/* testimonials */
+
+.testimonials {
+  width: 95%;
+  margin: 100px 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials .texts {
+  width: 70%;
+  text-align: center;
+}
+
+.testimonials .texts h2 {
+  color: var(--blanco);
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+.testimonials .texts p {
+  color: var(--blanco);
+  line-height: 24px;
+}
+
+.testimonials .testimonial-slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.testimonial-slider .slider-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.testimonial-slider button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.testimonial-slider button svg {
+  color: var(--morado);
+  font-size: 40px;
+}
+
+.testimonials .testimonial-slider .item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+.testimonials .testimonial-slider .item:not(.active) {
+  display: none;
+}
+
+
+.testimonials .testimonial-slider .item .img  {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.testimonials .testimonial-slider .item .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonials .testimonial-slider .item .text {
+  width: 70%;
+}
+
+.testimonials .testimonial-slider .item .text p {
+  color: var(--blanco);
+  line-height: 24px;
+}
+
+.testimonials .testimonial-slider .slider-btn {
+  background: transparent;
+  border: none;
+  color: var(--blanco);
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+.testimonials .testimonial-slider .slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.testimonials .testimonial-slider .dot {
+  width: 142px;
+  height: 142px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.testimonials .testimonial-slider .dot.active {
+  background-color: var(--blanco);
+}
+
+/* CSS para los dots de paginación */
+.dots {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 14px;
+  width: 14px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 1px solid var(--morado);
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: var(--morado);
+}
+
+@media (max-width: 1400px) {
+  .testimonials .texts {
+    width: 90%;
+    text-align: center;
+  }
+  .testimonials .testimonial-slider .item .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1240px) {
+  .testimonials{
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 620px) {
+  .testimonials .texts {
+    width: 100%;
+  }
+
+  .testimonials .slider-container {
+    position: relative;
+  }
+
+  .testimonial-slider .prev-btn,
+  .testimonial-slider .next-btn {
+    position: absolute;
+    z-index: 99;
+  }
+
+  .testimonial-slider .prev-btn {
+    left: 0;
+  }
+  .testimonial-slider .next-btn {
+    right: 0;
+  }
+}
+/* testimonials */

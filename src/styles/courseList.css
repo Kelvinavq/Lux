@@ -1,0 +1,177 @@
+.content-courseList {
+  width: 95%;
+}
+
+.content-courseList .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 910px) {
+  .content-courseList .head {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+.content-courseList .head button {
+  padding: 10px 10px;
+  border-radius: 15px;
+  border: none;
+  color: var(--blanco);
+  background: var(--morado);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.content-courseList .courseList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 20px;
+  padding: 20px 0;
+  
+}
+
+@media (max-width: 720px) {
+  .content-courseList .courseList {
+    place-items: center;
+    
+  }
+}
+
+.content-courseList .courseList .card {
+  max-width: 320px;
+  height: 514px;
+  overflow: visible;
+}
+
+.content-courseList .courseList .card .contenido {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.content-courseList .courseList .card .contenido .imgTeacher {
+  max-width: 90%;
+  min-height: 210px;
+  height: 210px;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+}
+
+.content-courseList .courseList .card .contenido .imgTeacher img {
+  max-width: 100%;
+}
+
+.content-courseList .courseList .card .contenido .profile {
+  position: absolute;
+  color: var(--blanco);
+  right: 5px;
+  margin-top: -70px;
+  z-index: 99;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: var(--morado);
+  color: var(--blanco);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.content-courseList .courseList .card .contenido .profile a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blanco);
+}
+
+.content-courseList .courseList .card .contenido .profile svg {
+  font-size: 33px;
+}
+
+.content-courseList .courseList .texts {
+  width: 90%;
+  text-align: center;
+}
+
+.content-courseList .courseList .texts h2,
+.content-courseList .courseList .texts p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.content-courseList .courseList .barra-progreso {
+  width: 100%;
+}
+
+.content-courseList .courseList .progress-loader {
+  width: 100%;
+  background: var(--blanco);
+  height: 5px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.content-courseList .courseList .progress {
+  width: 100px;
+  height: 5px;
+  border-radius: 7px;
+  background: var(--morado);
+  transition: width 0.5s;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 40%;
+  }
+}
+
+.content-courseList .courseList .buttons {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content-courseList .courseList .buttons button {
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.content-courseList .courseList .buttons button:first-child {
+  background: var(--morado);
+  color: var(--blanco);
+}
+
+.content-courseList .courseList .buttons button:last-child {
+  background: transparent;
+  color: var(--morado);
+  border: 2px solid var(--morado);
+}
+
+.content-courseList .courseList .buttons button:hover {
+  transition: all 0.4s;
+  background: var(--morado-dos);
+  color: var(--blanco);
+}
