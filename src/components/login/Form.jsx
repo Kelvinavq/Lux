@@ -60,7 +60,7 @@ export const Form = () => {
 
       <div className="head">
         <span>{Translation[language].loginLink}</span>
-        <a href="#">{Translation[language].loginLink2}</a>
+        <a href="https://office.luxinternational.us/auth/login">{Translation[language].loginLink2}</a>
       </div>
 
       <form className="login" id="login" onSubmit={handleSubmit}>

@@ -1,0 +1,255 @@
+.container-sidebar.transfer {
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-image: url("../assets/img/bgUsdt.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px 0;
+}
+
+.container-cardsTransfer {
+  width: 95%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.content-transfer {
+  width: 95%;
+  min-height: 98vh;
+  border-radius: 30px;
+  background: #000000a8;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+.container-cardsTransfer .cards {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.container-cardsTransfer .card {
+  max-width: 550px;
+}
+
+.container-cardsTransfer .cards .card .contenido {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  place-items: center;
+}
+
+.container-cardsTransfer .cards .card .contenido .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-cardsTransfer .cards .card .contenido .img .circle {
+  width: 80px;
+  height: 80px;
+  background: var(--oscuro);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-cardsTransfer .cards .card .contenido .img img {
+  max-width: 50px;
+  margin-top: 10px;
+}
+
+.container-cardsTransfer .cards .card .contenido .content-card h2 {
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+.container-cardsTransfer .cards .card .contenido .content-card span {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+@media (max-width: 1200px) {
+  .container-cardsTransfer .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .container-cardsTransfer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .container-cardsTransfer .cards {
+    place-items: center;
+    max-width: 100%;
+    gap: 20px;
+  }
+  .container-cardsTransfer .card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 470px) {
+  .container-cardsTransfer .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-cardsTransfer .card {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .container-cardsTransfer .cards .card .contenido .content-card h2 {
+    font-size: 1.2em;
+  }
+
+  .container-cardsTransfer .cards .card .contenido .content-card span {
+    font-size: 2em;
+  }
+  .container-cardsTransfer .cards .card .contenido .img .circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .container-cardsTransfer .cards .card .contenido .img img {
+    max-width: 40px;
+  }
+}
+
+.formTransfer {
+  width: 95%;
+  margin-top: 50px;
+}
+
+/* form */
+
+.formTransfer form {
+  max-width: 65%;
+}
+
+.formTransfer form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formTransfer form .inputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.formTransfer form .grupo-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formTransfer form .grupo-input input,
+.formTransfer form .grupo-input select,
+.formTransfer form .grupo-input textarea {
+  width: 100%;
+  height: 45px !important;
+  background: transparent;
+  border-radius: 15px;
+  outline: none;
+  border: 2px solid var(--blanco);
+  color: var(--blanco);
+  padding-left: 10px;
+}
+
+.formTransfer form .grupo-input select {
+  height: 51px !important;
+}
+
+.formTransfer form .grupo-input textarea {
+  height: 120px !important;
+  padding-top: 10px;
+}
+
+.formTransfer form .btn-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+
+.formTransfer form .btn-input input {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 15px;
+  height: 45px;
+  color: var(--blanco);
+  font-weight: 600;
+  background: var(--morado);
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s ease;
+  outline: none;
+}
+
+.formTransfer form .btn-input input:hover {
+  transition: all 0.5s ease;
+  background: var(--morado-dos);
+}
+
+@media (max-width: 1200px) {
+  .formTransfer form {
+    max-width: 90%;
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 850px) {
+  .formTransfer form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .formTransfer {
+    width: 100%;
+  }
+
+  .formTransfer form .inputs {
+    flex-direction: column;
+  }
+
+  .content-transfer {
+    width: 100%;
+  }
+
+  .container-cardsTransfer {
+    width: 100%;
+  }
+
+  .formTransfer form .grupo-input input,
+  .formTransfer form .grupo-input select,
+  .formTransfer form .grupo-input textarea {
+    width: 95% !important;
+    padding: 0;
+  }
+
+  .formTransfer form .btn-input input {
+    margin-left: 10px;
+  }
+
+  .title h2 {
+    margin-left: 10px;
+  }
+}

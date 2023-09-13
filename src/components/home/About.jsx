@@ -17,9 +17,6 @@ import { Link } from "react-router-dom";
 export const About = () => {
   const { language } = useContext(LanguageContext);
 
-  const handleRedirect = () => {
-    window.location.href = "https://luxinternational.us/auth/login";
-  };
   return (
     <div className="container-inner">
       <section className="about">
@@ -35,7 +32,7 @@ export const About = () => {
           <p>{Translation[language].aboutTextTwo}</p>
 
           {/* THE BUTTON SHOULD REDIRECT THE USER TO REGISTER IN MLM */}
-          <Link to="https://luxinternational.us/auth/login">
+          <Link to="https://office.luxinternational.us/auth/login">
             <button>
               {Translation[language].buttonAbout}
               <div className="circulo">

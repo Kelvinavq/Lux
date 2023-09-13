@@ -7,6 +7,10 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import RoofingOutlinedIcon from "@mui/icons-material/RoofingOutlined";
 import ImportContactsOutlinedIcon from "@mui/icons-material/ImportContactsOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import InsightsIcon from '@mui/icons-material/Insights';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import PaidIcon from '@mui/icons-material/Paid';
+
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import CloseIcon from "@mui/icons-material/Close";
 import img1 from "../../assets/img/slide.jpg";
@@ -65,6 +69,33 @@ const Sidebar = () => {
                     <ImportContactsOutlinedIcon />
                   </span>
                   <span className="menu-title">{Translation[language].sidebarUserItem2}</span>
+                </Link>
+              </li>
+
+              <li className={`menu-item ${location.pathname === '/user/ranking' ? 'active' : ''}`}>
+                <Link to="/user/ranking" >
+                  <span className="menu-icon">
+                    <InsightsIcon />
+                  </span>
+                  <span className="menu-title">Ranking</span>
+                </Link>
+              </li>
+
+              <li className={`menu-item ${location.pathname === '/user/transfer' ? 'active' : ''}`}>
+                <Link to="/user/transfer" >
+                  <span className="menu-icon">
+                    <AccountBalanceIcon />
+                  </span>
+                  <span className="menu-title">Transferir Fondos</span>
+                </Link>
+              </li>
+
+              <li className={`menu-item ${location.pathname === '/user/request' ? 'active' : ''}`}>
+                <Link to="/user/request" >
+                  <span className="menu-icon">
+                    <PaidIcon />
+                  </span>
+                  <span className="menu-title">Solicitar Pago</span>
                 </Link>
               </li>
 

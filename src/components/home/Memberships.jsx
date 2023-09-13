@@ -47,7 +47,7 @@ export const Memberships = () => {
   ];
 
   const handleRedirect = () => {
-    window.location.href = "https://luxinternational.us/auth/login";
+    window.location.href = "https://office.luxinternational.us/auth/login";
   };
   return (
     <div className="container-inner">

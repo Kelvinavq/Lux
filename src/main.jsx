@@ -10,6 +10,9 @@ import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/user/Dashboard";
 import { Courses } from "./pages/user/Courses";
 import { Lecture } from "./pages/user/Lecture";
+import { Ranking } from "./pages/user/Ranking";
+import { Transfer } from "./pages/user/Transfer";
+import { Request } from "./pages/user/Request";
 
 import { DashboardAdmin } from "./pages/admin/DashboardAdmin";
 import { Tools } from "./pages/admin/Tools";
@@ -37,6 +40,18 @@ const router = createBrowserRouter([
   {
     path: "/user/lecture",
     element: <Lecture />,
+  },
+  {
+    path: "/user/ranking",
+    element: <Ranking />,
+  },
+  {
+    path: "/user/transfer",
+    element: <Transfer />,
+  },
+  {
+    path: "/user/request",
+    element: <Request />,
   },
   {
     path: "/admin/dashboard",

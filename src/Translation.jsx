@@ -147,7 +147,7 @@ export const Translation = {
     FCcontentOne7:
       "Desde la creación de tu plataforma de comercio electrónico hasta la gestión de inventario y servicio al cliente en línea, aprenderás todos los aspectos clave.",
 
-      FCbutton: "Obtener",
+    FCbutton: "Obtener",
 
     // FeaturedCourses (carousel)
 
@@ -211,6 +211,7 @@ export const Translation = {
     sidebarUserTitle2: "Cuenta",
     sidebarUserItem2: "Cursos",
     sidebarUserItem3: "Cerrar Sesión",
+    sidebarUserItem4: "Clasificación",
 
     // ******************* Sidebar User ***************************
 
@@ -289,6 +290,15 @@ export const Translation = {
     lectureTextProgress: "Tu progreso es del",
 
     // ******************* Lecture ***************************
+
+    // ******************* Rankings ***************************
+    rankingTitle: "Top Embajadores",
+    rankingTable1: "Posición",
+    rankingTable2: "Usuario",
+    rankingTable3: "Referidos",
+    rankingTable4: "Ingresos",
+
+    // ******************* Rankings ***************************
   },
   en: {
     // ******************* home ***************************
@@ -434,7 +444,7 @@ export const Translation = {
     FCcontentOne7:
       "From creating your e-commerce platform to online inventory management and customer service, you will learn all the key aspects.",
 
-      FCbutton: "Get",
+    FCbutton: "Get",
 
     // FeaturedCourses (carousel)
 
@@ -498,6 +508,7 @@ export const Translation = {
     sidebarUserTitle2: "Account",
     sidebarUserItem2: "Courses",
     sidebarUserItem3: "Log out",
+    sidebarUserItem4: "Ranking",
 
     // ******************* Sidebar User ***************************
 
@@ -576,6 +587,15 @@ export const Translation = {
     lectureTextProgress: "Your progress is",
 
     // ******************* Lecture ***************************
+
+    // ******************* Rankings ***************************
+    rankingTitle: "Top Ambassadors",
+    rankingTable1: "Position",
+    rankingTable2: "User",
+    rankingTable3: "References",
+    rankingTable4: "Incomes",
+
+    // ******************* Rankings ***************************
   },
   fr: {
     // ******************* home ***************************
@@ -722,7 +742,7 @@ export const Translation = {
     FCcontentOne7:
       "De la création de votre plate-forme de commerce électronique à la gestion des stocks et du service à la clientèle en ligne, vous apprendrez tous les aspects clés.",
 
-      FCbutton: "Obtenir",
+    FCbutton: "Obtenir",
 
     // FeaturedCourses (carousel)
 
@@ -787,6 +807,7 @@ export const Translation = {
     sidebarUserTitle2: "Compte",
     sidebarUserItem2: "Courses",
     sidebarUserItem3: "Se déconnecter",
+    sidebarUserItem4: "Classement",
 
     // ******************* Sidebar User ***************************
 
@@ -865,5 +886,14 @@ export const Translation = {
     lectureTextProgress: "Votre progression est",
 
     // ******************* Lecture ***************************
+
+    // ******************* Rankings ***************************
+    rankingTitle: "Top Ambassadeurs",
+    rankingTable1: "Positionnement",
+    rankingTable2: "Utilisateur",
+    rankingTable3: "Référencés",
+    rankingTable4: "Les revenus",
+
+    // ******************* Rankings ***************************
   },
 };

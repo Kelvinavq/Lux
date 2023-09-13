@@ -1,0 +1,248 @@
+.container-sidebar.request {
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-image: url("../assets/img/bgUsdt.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px 0;
+}
+
+.container-cardsRequest {
+  width: 95%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.content-request {
+  width: 95%;
+  min-height: 98vh;
+  border-radius: 30px;
+  background: #000000a8;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+.container-cardsRequest .cards {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.container-cardsRequest .card {
+  max-width: 550px;
+}
+
+.container-cardsRequest .cards .card .contenido {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  place-items: center;
+}
+
+.container-cardsRequest .cards .card .contenido .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-cardsRequest .cards .card .contenido .img .circle {
+  width: 80px;
+  height: 80px;
+  background: var(--oscuro);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-cardsRequest .cards .card .contenido .img img {
+  max-width: 50px;
+  margin-top: 10px;
+}
+
+.container-cardsRequest .cards .card .contenido .content-card h2 {
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+.container-cardsRequest .cards .card .contenido .content-card span {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+@media (max-width: 1200px) {
+  .container-cardsRequest .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .container-cardsRequest {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .container-cardsRequest .cards {
+    place-items: center;
+    max-width: 100%;
+    gap: 20px;
+  }
+  .container-cardsRequest .card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 470px) {
+  .container-cardsRequest .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-cardsRequest .card {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .container-cardsRequest .cards .card .contenido .content-card h2 {
+    font-size: 1.2em;
+  }
+
+  .container-cardsRequest .cards .card .contenido .content-card span {
+    font-size: 2em;
+  }
+  .container-cardsRequest .cards .card .contenido .img .circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .container-cardsRequest .cards .card .contenido .img img {
+    max-width: 40px;
+  }
+}
+
+.formRequest {
+  width: 95%;
+  margin-top: 100px;
+}
+
+/* form */
+
+.formRequest form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 200px;
+}
+
+.formRequest form .inputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.formRequest form .grupo-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formRequest form .grupo-input input,
+.formRequest form .grupo-input select {
+  width: 100%;
+  height: 45px !important;
+  background: transparent;
+  border-radius: 15px;
+  outline: none;
+  border: 2px solid var(--blanco);
+  color: var(--blanco);
+  padding-left: 10px;
+}
+
+.formRequest form .grupo-input select {
+  height: 51px !important;
+}
+
+.formRequest form .btn-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.formRequest form .btn-input input {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 15px;
+  height: 45px;
+  color: var(--blanco);
+  font-weight: 600;
+  background: var(--morado);
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s ease;
+  outline: none;
+}
+
+.formRequest form .btn-input input:hover {
+  transition: all 0.5s ease;
+  background: var(--morado-dos);
+}
+
+@media (min-width: 1400px) {
+  .formRequest form {
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .formRequest form {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .formRequest form {
+    max-width: 70%;
+  }
+}
+@media (max-width: 720px) {
+  .formRequest form {
+    max-width: 100%;
+  }
+
+  .formRequest form .inputs input,
+  .formRequest form .inputs select {
+    width: 95%;
+    padding: 0;
+  }
+  .formRequest form .btn-input input {
+    margin-left: 10px;
+  }
+  .formRequest {
+    width: 100%;
+  }
+
+  .content-request {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container-cardsRequest {
+    width: 100%;
+  }
+
+  .title h2 {
+    margin-left: 10px;
+  }
+}
