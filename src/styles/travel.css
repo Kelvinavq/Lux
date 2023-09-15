@@ -1,0 +1,17 @@
+.container-banner{
+    width: 95%;
+}
+
+
+.container-banner .head strong{
+    color: var(--morado);
+}
+
+.container-banner .banner{
+    aspect-ratio: 2 /1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+}
+

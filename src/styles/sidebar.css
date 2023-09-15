@@ -1,6 +1,6 @@
 .sidebar {
   position: fixed;
-  z-index: 999;
+  z-index: 990;
   top: 0;
   left: 0;
   display: flex;
@@ -12,6 +12,7 @@
   border-right: 1px solid var(--morado);
   transition: all 1s;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sidebar.open {
@@ -31,7 +32,7 @@
 .sidebar .sidebar-toggle {
   position: absolute;
   top: 40px;
-  right: -12px;
+  right: 5px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -43,6 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999999 !important;
 }
 
 .sidebar .sidebar-header {
@@ -196,7 +198,7 @@
 }
 
 .sidebar.open .sidebar-content {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding-left: 20px;
 }
 
@@ -232,6 +234,7 @@
   right: 0;
   display: flex;
   justify-content: center;
+  overflow-y: auto;
 }
 
 .sidebar.open ~ .container-sidebar {

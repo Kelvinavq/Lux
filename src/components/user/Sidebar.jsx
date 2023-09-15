@@ -10,6 +10,7 @@ import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import InsightsIcon from '@mui/icons-material/Insights';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import PaidIcon from '@mui/icons-material/Paid';
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import CloseIcon from "@mui/icons-material/Close";
@@ -98,6 +99,15 @@ const Sidebar = () => {
                   <span className="menu-title">Solicitar Pago</span>
                 </Link>
               </li>
+
+              <li className={`menu-item ${location.pathname === '/user/travel' ? 'active' : ''}`}>
+                <Link to="/user/travel" >
+                  <span className="menu-icon">
+                    <FlightTakeoffIcon />
+                  </span>
+                  <span className="menu-title">Lux Travel</span>
+                </Link>
+              </li> 
 
               <li className="menu-item ">
                 <Link to="/">

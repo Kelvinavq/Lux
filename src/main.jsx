@@ -13,6 +13,7 @@ import { Lecture } from "./pages/user/Lecture";
 import { Ranking } from "./pages/user/Ranking";
 import { Transfer } from "./pages/user/Transfer";
 import { Request } from "./pages/user/Request";
+import { Travel } from "./pages/user/Travel";
 
 import { DashboardAdmin } from "./pages/admin/DashboardAdmin";
 import { Tools } from "./pages/admin/Tools";
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/user/request",
     element: <Request />,
+  },
+  {
+    path: "/user/travel",
+    element: <Travel />,
   },
   {
     path: "/admin/dashboard",
