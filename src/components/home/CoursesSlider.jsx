@@ -27,7 +27,7 @@ export const CoursesSlider = () => {
       link: "#coaching",
     },
     {
-      image: imgIngles,
+      image: imgCoaching,
       title: Translation[language].courseTitleEnglish,
       link: "#english",
     },
