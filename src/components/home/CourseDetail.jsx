@@ -12,6 +12,7 @@ import imgOratoria from "../../assets/courses/oratoria.jpg";
 import imgTrading from "../../assets/courses/trading.jpg";
 import imgMarketing from "../../assets/courses/marketing_digital.jpeg";
 import imgEcommerce from "../../assets/courses/ecommerce.jpg";
+import imgIngles from "../../assets/courses/imingles.jpg";
 
 // backgrounds
 import bgCoaching from "../../assets/courses/BgCoaching.jpg";
@@ -40,7 +41,7 @@ export const CourseDetail = () => {
     },
     {
       className: "no-parallax",
-      image: imgCoaching,
+      image: imgIngles,
       lux: "LUX",
       academy: "academy",
       title: Translation[language].englishTitle,
