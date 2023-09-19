@@ -12,7 +12,6 @@ import imgOratoria from "../../assets/courses/oratoria.jpg";
 import imgTrading from "../../assets/courses/trading.jpg";
 import imgMarketing from "../../assets/courses/marketing_digital.jpeg";
 import imgEcommerce from "../../assets/courses/ecommerce.jpg";
-import imgIngles from "../../assets/courses/ingles.jpg"
 
 
 import AOS from "aos";
