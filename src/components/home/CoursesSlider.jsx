@@ -7,7 +7,7 @@ import { Translation } from "../../Translation";
 import "../../styles/coursesSlider.css";
 
 import imgCoaching from "../../assets/courses/coaching_ventas.jpeg";
-import imgIngles from "../../assets/courses/ingles.jpg";
+import imgIngles from "../../assets/courses/Ingles.jpg";
 import imgDropshipping from "../../assets/courses/dropshipping.jpg";
 import imgOratoria from "../../assets/courses/oratoria.jpg";
 import imgTrading from "../../assets/courses/trading.jpg";
