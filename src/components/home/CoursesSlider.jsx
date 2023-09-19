@@ -14,6 +14,7 @@ import imgTrading from "../../assets/courses/trading.jpg";
 import imgMarketing from "../../assets/courses/marketing_digital.jpeg";
 import imgEcommerce from "../../assets/courses/ecommerce.jpg";
 
+
 import AOS from "aos";
 import aosConfig from "../../aosConfig";
 
