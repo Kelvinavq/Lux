@@ -7,7 +7,6 @@ import "../../styles/coursesDetails.css";
 
 // images
 import imgCoaching from "../../assets/courses/coaching_ventas.jpeg";
-// import imgIngles from "../../assets/courses/ingles.jpg";
 import imgDropshipping from "../../assets/courses/dropshipping.jpg";
 import imgOratoria from "../../assets/courses/oratoria.jpg";
 import imgTrading from "../../assets/courses/trading.jpg";
