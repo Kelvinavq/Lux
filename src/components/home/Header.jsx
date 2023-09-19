@@ -33,7 +33,7 @@ export const Header = () => {
             </div>
 
             <div className="buttons">
-              <button data-aos="fade-right"><Link to={'https://office.luxinternational.us/auth/login'}>{Translation[language].headerButton1}</Link></button>
+              <button data-aos="fade-right"><Link to={'/user/dashboard'}>{Translation[language].headerButton1}</Link></button>
               <button data-aos="fade-left"><a href="#memberships">{Translation[language].headerButton2}</a></button>
             </div>
           </div>

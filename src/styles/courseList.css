@@ -33,19 +33,17 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
   gap: 20px;
   padding: 20px 0;
-  
 }
 
 @media (max-width: 720px) {
   .content-courseList .courseList {
     place-items: center;
-    
   }
 }
 
 .content-courseList .courseList .card {
   max-width: 320px;
-  height: 514px;
+  height: 580px;
   overflow: visible;
 }
 
@@ -87,7 +85,7 @@
   align-items: center;
   cursor: pointer;
 }
-.content-courseList .courseList .card .contenido .profile a{
+.content-courseList .courseList .card .contenido .profile a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,14 +162,46 @@
   color: var(--blanco);
 }
 
-.content-courseList .courseList .buttons button:last-child {
+.content-courseList .courseList .buttons button:nth-child(2) {
   background: transparent;
   color: var(--morado);
   border: 2px solid var(--morado);
 }
 
-.content-courseList .courseList .buttons button:hover {
+.content-courseList .courseList .buttons button:last-child {
+  background: #2e2e2f;
+  color: #505050;
+}
+
+.content-courseList .courseList .buttons button:hover:not(button:last-child) {
   transition: all 0.4s;
   background: var(--morado-dos);
   color: var(--blanco);
+}
+
+.content-courseList .courseList .buttons button.active{
+  background: #bd2437;
+  color: var(--blanco);
+}
+
+.badge_live {
+  display: none;
+}
+
+.badge_live.active {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #bd2437;
+  padding: 10px 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge_live.active span {
+  font-size: 0.8em;
+  margin-bottom: -5px;
 }

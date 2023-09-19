@@ -23,6 +23,7 @@ export const CourseList = () => {
       image: imgLorena,
       progressPercentage: 36,
       link: "/user/courses",
+      statusLive: "",
     },
     {
       name: "Titulo Curso",
@@ -30,6 +31,7 @@ export const CourseList = () => {
       image: imgRicardo,
       progressPercentage: 75,
       link: "/user/courses",
+      statusLive: "active",
     },
     {
       name: "Titulo Curso",
@@ -37,6 +39,7 @@ export const CourseList = () => {
       image: imgOthni,
       progressPercentage: 90,
       link: "/user/courses",
+      statusLive: "",
     },
   ];
 
@@ -87,6 +90,13 @@ export const CourseList = () => {
                 </div>
                 <div className="contenido">
                   <div className="imgTeacher">
+                    <div
+                      className={`badge_live ${
+                        course.statusLive === "active" ? "active" : ""
+                      }`}
+                    >
+                      <span>EN DIRECTO</span>
+                    </div>
                     <img src={course.image} alt="" />
                   </div>
 
@@ -117,6 +127,12 @@ export const CourseList = () => {
                     </button>
                     <button onClick={() => handleLanguageSelection(course)}>
                       {Translation[language].userCoursesCardButton2}
+                    </button>
+
+                    <button className={` ${
+                        course.statusLive === "active" ? "active" : ""
+                      }`}>
+                      Ir al Live
                     </button>
                   </div>
                 </div>
