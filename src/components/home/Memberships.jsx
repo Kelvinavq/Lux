@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { LanguageContext } from "../home/LanguageContext";
 import { Translation } from "../../Translation";
 import "../../styles/memberships.css";
 import lux_logo from "../../assets/lux_logo.png";
 import { Link } from "@mui/material";
+
+import AOS from "aos";
+import aosConfig from "../../aosConfig";
 
 /**
  * The Memberships component displays information about different membership plans,
@@ -21,6 +24,7 @@ export const Memberships = () => {
         Translation[language].basicContent1,
         Translation[language].basicContent2,
       ],
+      animation: "zoom-in-right"
     },
     {
       title: Translation[language].vipTitle,
@@ -32,6 +36,7 @@ export const Memberships = () => {
         Translation[language].vipContent4,
         Translation[language].vipContent5,
       ],
+      animation: "fade-up"
     },
     {
       title: Translation[language].eliteTitle,
@@ -43,24 +48,29 @@ export const Memberships = () => {
         Translation[language].eliteContent4,
         Translation[language].eliteContent5,
       ],
+      animation: "zoom-in-left"
     },
   ];
 
   const handleRedirect = () => {
     window.location.href = "https://office.luxinternational.us/auth/login";
   };
+
+  useEffect(() => {
+    AOS.init(aosConfig);
+  }, []);
   return (
-    <div className="container-inner">
+    <div className="cont-memberships" id="memberships">
       <div className="memberships">
         <div className="texts">
-          <h2>{Translation[language].membershipTitle}</h2>
-          <p>{Translation[language].membershipText1}</p>
-          <p>{Translation[language].membershipText2}</p>
+          <h2 data-aos="fade-up">{Translation[language].membershipTitle}</h2>
+          <p data-aos="fade-up"> {Translation[language].membershipText1}</p>
+          <p data-aos="fade-up">{Translation[language].membershipText2}</p>
         </div>
 
         <div className="cards-memberships">
           {membershipsData.map((membership, index) => (
-            <div className="membership" key={index}>
+            <div className="membership" key={index} data-aos={membership.animation}>
               <div className="logo">
                 <img src={lux_logo} alt="" />
               </div>

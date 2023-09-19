@@ -1,0 +1,362 @@
+.cont-navbar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+.cont-navbar.scrolled {
+  background-color: var(--oscuro);
+}
+
+.navContainer {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Open Sans", sans-serif;
+}
+
+.navContainer .logo img {
+  max-width: 100px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  z-index: 9 !important;
+}
+
+.nav-links li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.nav-links .item::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--morado);
+  position: absolute;
+  bottom: -0.25rem;
+  right: 0;
+  transition: right 0.4s, width 0.4s, left 0.4s;
+}
+
+.nav-links li:hover::before {
+  transition: all 0.4s;
+  width: 100%;
+  left: 0;
+}
+
+.nav-links li:hover a {
+  color: var(--morado);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+.dropdown-content {
+  width: 220px;
+  border-radius: 15px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+  background-color: var(--oscuro-dos);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.dropdown-content.active {
+  display: block;
+  opacity: 1;
+  height: auto;
+  max-height: 300px;
+  z-index: 9;
+}
+
+.dropdown-content li {
+  margin: 0;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  color: var(--blanco) !important;
+  font-size: 1em;
+  display: block;
+  padding: 20px 20px;
+}
+
+.dropdownMenu {
+  position: relative;
+}
+
+.dropdownMenu:hover .dropdown-content {
+  width: 220px;
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+  opacity: 1;
+}
+.navbar .btn-login {
+  z-index: 9;
+}
+
+.navbar .btn-login button {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: var(--oscuro-tres);
+  color: var(--morado-oscuro);
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 20px;
+  transition: all 0.4s;
+  text-transform: uppercase;
+}
+
+.navbar .btn-login button a{
+  color: var(--morado-oscuro);
+  padding: 10px 20px;
+}
+
+.navbar .btn-login button:hover a{
+  color: var(--blanco);
+
+}
+
+
+.navbar .btn-login button:hover {
+  transition: all 0.4s;
+  color: var(--blanco);
+  background: var(--morado);
+}
+
+/* selector */
+
+.container .selector {
+  margin-right: 20px;
+  z-index: 2;
+}
+
+.dropdown {
+  position: relative;
+  perspective: 200px;
+}
+
+.dropdown button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+}
+
+.dropdown > button {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.menu {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transform-origin: 100% 0%;
+  scale: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  background: var(--oscuro);
+  transition: 0.4s;
+}
+
+.dropdown.open .menu {
+  scale: 1;
+  right: 0;
+  top: 72px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu button {
+  border: 0;
+  width: 100%;
+  height: 50px;
+  border-radius: 0;
+}
+
+.menu button:hover {
+  background: var(--morado);
+}
+.selector button img {
+  width: 30px;
+}
+
+.selector {
+  display: flex;
+  gap: 15px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .menu-icon {
+    display: block;
+  }
+}
+
+.btn-hamburger {
+  display: none;
+}
+
+.btn-login.nav {
+  display: none;
+  z-index: 1 !important;
+}
+
+.close {
+  display: none;
+}
+
+.nav-links .logo {
+  display: none;
+}
+
+@media (max-width: 703px) {
+
+  .cont-navbar{
+    height: 65px;
+  }
+  .nav-links .logo {
+    display: block;
+  }
+  .container .selector {
+    display: none;
+  }
+  .navbar {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background: var(--oscuro);
+    transform: translateX(-100%);
+    transition: all 0.4s;
+  }
+
+  .btn-hamburger {
+    display: block;
+    display: flex;
+  }
+
+  .btn-hamburger .selector {
+    display: block;
+  }
+
+  .btn-hamburger .selector button {
+    box-shadow: none;
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: var(--oscuro);
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: var(--morado);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  .close:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+      -1px -1px 6px rgba(20, 20, 20, 0.4);
+    color: var(--morado-dos);
+    transition: all 0.4s;
+  }
+
+  .btn-hamburger button {
+    background: var(--oscuro);
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: var(--morado);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  .cont-navbar.open .navbar {
+    transform: translateX(-10px);
+    transition: all 0.4s;
+    z-index: 999;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .nav-links li a {
+    font-size: 1.5em;
+  }
+
+  .btn-login {
+    margin-top: 20px;
+    z-index: 1;
+  }
+
+  .dropdown-content {
+    z-index: 99;
+    position: relative;
+  }
+}

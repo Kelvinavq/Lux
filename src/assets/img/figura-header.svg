@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640.58 527.59">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 1.38px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #fffdff;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-5 {
+        fill: #fffdff;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-7, .cls-8 {
+        fill: #a78bfa;
+      }
+
+      .cls-3 {
+        stroke-width: 1.39px;
+      }
+
+      .cls-8 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-4 {
+        stroke: #a78bfa;
+        stroke-width: 8.25px;
+      }
+    </style>
+    <clipPath id="clippath" >
+      <path class="cls-2" d="m149.3,279.69l213.79,215.49c8.67,8.74,22.87,8.74,31.54,0l213.79-215.49c8.67-8.74,8.67-23.05,0-31.79L394.63,32.41c-8.67-8.74-22.87-8.74-31.54,0l-213.79,215.49c-8.67,8.74-8.67,23.05,0,31.79Z"/>
+    </clipPath>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="6.98" dy="3.88"/>
+      <feGaussianBlur result="blur" stdDeviation="4.65"/>
+      <feFlood flood-color="#000" flood-opacity=".63"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="OBJECTS">
+    <g>
+      <g>
+        <path class="cls-7" d="m124.35,281.42l237.02,238.9c9.62,9.69,25.35,9.69,34.97,0l237.02-238.9c9.62-9.69,9.62-25.55,0-35.24L396.34,7.27c-9.62-9.69-25.35-9.69-34.97,0L124.35,246.17c-9.62,9.69-9.62,25.55,0,35.24Z"/>
+        <g class="cls-6">
+          <image width="1920" height="2879" transform="translate(141.53 -18.35) scale(.25)" xlink:href="../header-lux.jpg"/>
+        </g>
+      </g>
+      <g>
+        <g>
+          <line class="cls-4" x1="317.79" y1="7.38" x2="208.28" y2="114.51"/>
+          <g>
+            <path class="cls-7" d="m128.65,436.94l50.98,51.39c2.07,2.08,5.45,2.08,7.52,0l50.98-51.39c2.07-2.08,2.07-5.5,0-7.58l-50.98-51.39c-2.07-2.08-5.45-2.08-7.52,0l-50.98,51.39c-2.07,2.08-2.07,5.5,0,7.58Z"/>
+            <path class="cls-8" d="m144.94,435.82l35.81,36.1c1.45,1.46,3.83,1.46,5.28,0l35.81-36.1c1.45-1.46,1.45-3.86,0-5.33l-35.81-36.1c-1.45-1.46-3.83-1.46-5.28,0l-35.81,36.1c-1.45,1.46-1.45,3.86,0,5.33Z"/>
+          </g>
+          <line class="cls-4" x1="113.63" y1="410.89" x2="4.12" y2="518.02"/>
+        </g>
+        <g>
+          <rect class="cls-3" x="150.25" y="386.18" width="8.48" height="8.48" rx=".36" ry=".36" transform="translate(-12.34 775.74) rotate(-135)"/>
+          <rect class="cls-5" x="85.68" y="340.05" width="16.48" height="16.48" rx=".64" ry=".64" transform="translate(-218.77 168.42) rotate(-45)"/>
+          <rect class="cls-5" x="99.85" y="164.03" width="8.78" height="8.78" rx=".34" ry=".34" transform="translate(-88.56 123.04) rotate(-45)"/>
+          <rect class="cls-1" x="68.87" y="116.02" width="15.46" height="15.46" rx=".18" ry=".18" transform="translate(-65.07 90.41) rotate(-45)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -95,11 +95,6 @@ export const LenguageSelector = () => {
             </button>
           </div>
         </div>
-        <div className="btn-login">
-          <Link to="https://office.luxinternational.us/auth/login">
-            <button id="btn-login">{Translation[language].login}</button>
-          </Link>
-        </div>
       </div>
     </>
   );

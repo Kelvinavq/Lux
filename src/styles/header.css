@@ -1,117 +1,238 @@
-/* top */
-.btn-login {
-  display: block;
+.cont-header {
+  width: 100%;
   display: flex;
-  justify-content: end;
-  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
 }
 
-.btn-login button {
-  padding: 10px 20px;
-  border-radius: 30px;
-  border: none;
-  background: var(--morado);
-  color: var(--blanco);
-  font-weight: bold;
-  letter-spacing: 1px;
-  cursor: pointer;
-  outline: none;
+.header {
+  width: 95%;
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  z-index: 1 !important;
 }
 
-.container {
-  width: 98%;
-  height: 98%;
-  background: var(--oscuro-dos);
-  border-radius: 30px;
-  overflow-y: auto;
+.header .left {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-left: 10px;
-}
-
-.container::-webkit-scrollbar {
-  width: 0;
-}
-
-.container .top {
-  width: 98%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container .top .logo img {
-  max-width: 100px;
-  cursor: pointer;
-}
-
-.container .selector {
-  margin-right: 20px;
-}
-
-.dropdown {
-  position: relative;
-  perspective: 200px;
-}
-
-.dropdown button {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  background: transparent;
-  border-radius: 8px;
-  border: 0;
-  cursor: pointer;
-}
-
-.dropdown > button {
-  position: relative;
-  z-index: 2;
-  transition: 0.3s;
-}
-
-.menu {
-  position: absolute;
-  overflow: hidden;
-  z-index: 1;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  transform-origin: 100% 0%;
-  scale: 0;
-  visibility: hidden;
-  border-radius: 8px;
-  background: var(--oscuro);
-  transition: 0.4s;
-}
-
-.dropdown.open .menu {
-  scale: 1;
-  right: 0;
-  top: 72px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.menu button {
-  border: 0;
-  width: 100%;
-  height: 50px;
-  border-radius: 0;
-}
-
-.menu button:hover {
-  background: var(--morado);
-}
-.selector button img {
-  width: 30px;
-}
-
-.selector {
-  display: flex;
   gap: 15px;
 }
-/* top */
+
+.header .left .title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.header .left .title .circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: var(--morado);
+  border-radius: 50%;
+  z-index: -1;
+  top: -20px;
+  left: -20px;
+}
+
+.header .left .title h2,
+.header .left .title h1 {
+  font-size: 3.8em;
+  margin: 0;
+}
+
+.header .left .title h2 {
+  font-family: "Nexa", serif;
+  font-weight: lighter;
+}
+.header .left .title h1 {
+  font-family: "Nexa", serif;
+  font-weight: bold;
+  margin-bottom: -5px;
+  color: var(--morado);
+}
+
+.header .left .text {
+  max-width: 450px;
+}
+.header .left .text p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.header .left .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.header .left .buttons button {
+  width: 190px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.header .left .buttons button:first-child {
+  background: var(--oscuro-tres);
+  color: var(--morado-oscuro);
+}
+.header .left .buttons button:first-child a {
+  color: var(--morado-oscuro);
+}
+
+.header .left .buttons button:first-child:hover {
+  background: var(--morado-dos);
+  color: var(--blanco);
+}
+
+.header .left .buttons button:first-child:hover a {
+  color: var(--blanco);
+}
+
+.header .left .buttons button:last-child {
+  background: var(--morado);
+  color: var(--blanco);
+}
+
+.header .left .buttons button:last-child a {
+  color: var(--blanco);
+}
+
+.header .left .buttons button:last-child:hover {
+  background: var(--morado-oscuro);
+  color: var(--blanco);
+}
+
+.header .left .buttons button a {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+}
+
+.header .right {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.header .right img {
+  position: absolute;
+  max-width: 1200px;
+  margin-top: -100px;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .header .right img {
+    max-width: 800px;
+  }
+  .header .left .title h2,
+  .header .left .title h1 {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 780px) {
+  .header {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .header .left {
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  .header .left .title {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header .left .title h2 {
+    position: relative;
+  }
+
+  .header .left .text {
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header .left .text p {
+    max-width: 450px;
+  }
+
+  .header .left .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header .right img {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    margin-left: -100px;
+  }
+}
+
+@media (max-width: 580px) {
+  .header .right img {
+    margin-top: -80px;
+  }
+}
+
+@media (max-width: 430px) {
+  .header .left .title h2,
+  .header .left .title h1 {
+    font-size: 2.4em;
+  }
+}
+
+@media (max-width: 420px) {
+  .header .left .buttons button {
+    width: 100%;
+    font-size: 0.9em;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 350px) {
+  .header .left .title h2,
+  .header .left .title h1 {
+    font-size: 2em;
+  }
+}

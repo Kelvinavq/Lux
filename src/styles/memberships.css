@@ -1,3 +1,10 @@
+.cont-memberships{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
 .memberships{
   width: 95%;
     display: flex;
@@ -9,17 +16,25 @@
 .memberships .texts {
   width: 70%;
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .memberships .texts h2 {
   color: var(--blanco);
   font-size: 2.2em;
   font-weight: 500;
+  max-width: 50%;
+  font-family: "Nexa", sans-serif;
+  font-weight: bold;
 }
 
 .memberships .texts p {
   color: var(--blanco);
   line-height: 24px;
+  max-width: 70%;
+  font-family: "Open Sans", sans-serif;
 }
 
 .memberships .texts strong {
@@ -49,6 +64,8 @@
   max-width: 300px; 
   margin: 10px;
   box-sizing: border-box;
+
+  box-shadow: 0px 0px 20px -12px #a78bfabb;
 }
 
 .cards-memberships .membership .logo {
@@ -249,11 +266,38 @@
 }
 
 @media (max-width: 1240px) {
-  .memberships{
-    margin-top: -100px;
+
+  .memberships .texts {
+    width: 90%;
   }
+  
+  .memberships .texts h2 {
+    max-width: 90%;
+  }
+  
+  .memberships .texts p {
+    max-width: 80%;
+  }
+  
 }
 
+
+@media (max-width: 720px) {
+
+  .memberships .texts {
+    width: 100%;
+  }
+  
+  .memberships .texts h2 {
+    max-width: 100%;
+    font-size: 2em;
+  }
+  
+  .memberships .texts p {
+    max-width: 100%;
+  }
+  
+}
 
 @media (max-width: 620px) {
   .memberships .texts  {

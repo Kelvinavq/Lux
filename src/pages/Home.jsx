@@ -1,10 +1,10 @@
+import { NavBar } from "../components/home/NavBar";
 import { Header } from "../components/home/Header";
-import { About } from "../components/home/About";
-import PopularCourses from "../components/home/PopularCourses";
-import Testimonial from "../components/home/Testimonial";
-import FeaturedCourses from "../components/home/FeaturedCourses";
-import { Memberships } from "../components/home/memberships";
+import { CoursesSlider } from "../components/home/CoursesSlider";
+import { CourseDetail } from "../components/home/CourseDetail";
+import { Memberships } from "../components/home/Memberships";
 import { Footer } from "../components/home/Footer";
+
 import { Preloader } from "../components/home/Preloader";
 
 /**
@@ -15,28 +15,16 @@ export const Home = () => {
   return (
     <main>
       <div className="container">
-        {/* Preloader component for displaying loading animation */}
-        <Preloader />
+        {/* <Preloader /> */}
 
-        {/* Header component for website navigation */}
+        <NavBar />
+
         <Header />
 
-        {/* About section describing the website */}
-        <About />
+        <CoursesSlider />
 
-        {/* PopularCourses section displaying trending courses */}
-        <PopularCourses />
-
-        {/* Testimonial section with user testimonials */}
-        <Testimonial />
-
-        {/* FeaturedCourses section showcasing featured courses */}
-        <FeaturedCourses />
-
-        {/* Memberships section for membership information */}
+        <CourseDetail />
         <Memberships />
-
-        {/* Footer component for the website footer */}
         <Footer />
       </div>
     </main>
