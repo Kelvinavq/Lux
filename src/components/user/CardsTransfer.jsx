@@ -1,12 +1,18 @@
+import React, { useContext } from "react";
+import { LanguageContext } from "../home/LanguageContext";
+import { Translation } from "../../Translation";
+
 import usdtLogo from "../../assets/icons/tether-usdt-logo.svg";
 import "../../styles/transfer.css"
 
 export const CardsTransfer = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <section className="container-cardsTransfer">
 
       <div className="title">
-        <h2>Transferencia de Fondos</h2>
+        <h2>{Translation[language].transferTitle}</h2>
       </div>
       <div className="cards">
         <div className="card">
@@ -23,7 +29,7 @@ export const CardsTransfer = () => {
             </div>
 
             <div className="content-card">
-              <h2>Saldo de la Billetera</h2>
+              <h2>{Translation[language].transferCardBalance}</h2>
               <span>$ 145</span>
             </div>
           </div>
@@ -42,7 +48,7 @@ export const CardsTransfer = () => {
             </div>
 
             <div className="content-card">
-              <h2>Saldo de la Billetera para Depósito</h2>
+              <h2>{Translation[language].transferCardBalanceDeposit}</h2>
               <span>$ 1.150</span>
             </div>
           </div>

@@ -78,7 +78,7 @@ const Sidebar = () => {
                   <span className="menu-icon">
                     <InsightsIcon />
                   </span>
-                  <span className="menu-title">Ranking</span>
+                  <span className="menu-title">{Translation[language].sidebarUserItem3}</span>
                 </Link>
               </li>
 
@@ -87,7 +87,7 @@ const Sidebar = () => {
                   <span className="menu-icon">
                     <AccountBalanceIcon />
                   </span>
-                  <span className="menu-title">Transferir Fondos</span>
+                  <span className="menu-title">{Translation[language].sidebarUserItem4}</span>
                 </Link>
               </li>
 
@@ -96,7 +96,7 @@ const Sidebar = () => {
                   <span className="menu-icon">
                     <PaidIcon />
                   </span>
-                  <span className="menu-title">Solicitar Pago</span>
+                  <span className="menu-title">{Translation[language].sidebarUserItem5}</span>
                 </Link>
               </li>
 
@@ -105,7 +105,7 @@ const Sidebar = () => {
                   <span className="menu-icon">
                     <FlightTakeoffIcon />
                   </span>
-                  <span className="menu-title">Lux Travel</span>
+                  <span className="menu-title">{Translation[language].sidebarUserItem6}</span>
                 </Link>
               </li> 
 
@@ -114,7 +114,7 @@ const Sidebar = () => {
                   <span className="menu-icon">
                     <LogoutOutlinedIcon />
                   </span>
-                  <span className="menu-title">{Translation[language].sidebarUserItem3}</span>
+                  <span className="menu-title">{Translation[language].sidebarUserItemLogOut}</span>
                 </Link>
               </li>
             </ul>

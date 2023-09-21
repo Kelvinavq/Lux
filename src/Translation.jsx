@@ -72,7 +72,6 @@ export const Translation = {
 
     // footer
 
-
     // memberships
 
     membershipTitle:
@@ -82,7 +81,7 @@ export const Translation = {
     membershipText2:
       "Únete a nosotros mientras te sumerges en un océano de conocimiento y te embarcas en un camino continuo de autodescubrimiento y crecimiento.",
 
-    basicTitle: "BÁSICO",
+    basicTitle: "BASIC",
     basicContent1: "Idiomas",
     basicContent2: "Trading",
 
@@ -102,7 +101,6 @@ export const Translation = {
 
     membershipButton: "Adquirir",
     // memberships
-
 
     // ******************* home ***************************
 
@@ -125,8 +123,11 @@ export const Translation = {
     sidebarUserItem1: "Inicio",
     sidebarUserTitle2: "Cuenta",
     sidebarUserItem2: "Cursos",
-    sidebarUserItem3: "Cerrar Sesión",
-    sidebarUserItem4: "Clasificación",
+    sidebarUserItem3: "Ranking",
+    sidebarUserItem4: "Transferir Fondos",
+    sidebarUserItem5: "Solicitar Pago",
+    sidebarUserItem6: "Lux Travel",
+    sidebarUserItemLogOut: "Cerrar Sesión",
 
     // ******************* Sidebar User ***************************
 
@@ -171,6 +172,8 @@ export const Translation = {
     userCoursesCardText: "Tu progreso es",
     userCoursesCardButton1: "Iniciar ahora",
     userCoursesCardButton2: "Ir a todo el curso",
+    userCoursesCardButton3: "Ir al live",
+    userCoursesBadgeLive: "EN DIRECTO",
 
     // ******************* Courses User ***************************
 
@@ -214,6 +217,49 @@ export const Translation = {
     rankingTable4: "Ingresos",
 
     // ******************* Rankings ***************************
+
+    // ******************* transfer ***************************
+    transferTitle: "Transferencia de Fondos",
+    transferCardBalance: "Saldo de la Billetera",
+    transferCardBalanceDeposit: "Saldo de la Billetera para Depósito",
+    transferTitleForm: "Solicitud de transferencia de fondos",
+    transferSelect: "Desde",
+    transferInputAmount: "Monto",
+    transferInputUser: "Seleccionar Usuario",
+    transferInputWallet: "Dirección de billetera USDT",
+    transferTextNote: "Nota",
+    transferButton: "Enviar Solicitud",
+
+    transferSwal1:"Error",
+    transferSwal2:"Por favor, complete todos los campos.",
+    // ******************* transfer ***************************
+
+    // ******************* request ***************************
+    requestTitle: "Solicitud de Pago",
+    requestCardBalance: "Saldo Disponible",
+    requestCardMinimum: "Retiro Mínimo",
+    requestTitleForm: "Solicitar Pago",
+    requestInputAmount: "Monto a Retirar $",
+    requestSelectUser: "Tipo de Moneda",
+    requestButton: "Solicitar",
+    // ******************* request ***************************
+
+    // ******************* travel ***************************
+
+    travelTitle: "Lux Travel",
+    travelText:
+      "En Lux reconocemos tu esfuerzo y te vamos a premiar con las mejores experiencias",
+    travelTitle2: "Ganadores del próximo viaje",
+    travelHeadTable1: "Usuario",
+    travelHeadTable2: "Destino",
+    travelHeadTable3: "Fecha",
+
+    travelCardTitle: "Progreso para calificar",
+    travelCardItem1: "Volumen Global (GV):",
+    travelCardItem2: "Volumen Personal (PV):",
+    travelCardItem3: "Rango:",
+
+    // ******************* travel ***************************
   },
   en: {
     // ******************* home ***************************
@@ -284,8 +330,6 @@ export const Translation = {
     footerTitle: "Terms and Conditions",
     // footer
 
-
-
     // memberships
 
     membershipTitle: "Join Lux, Explore, Learn and Grow with Our Memberships",
@@ -315,8 +359,6 @@ export const Translation = {
     membershipButton: "purchase",
     // memberships
 
-  
-
     // footer
 
     // ******************* home ***************************
@@ -336,12 +378,19 @@ export const Translation = {
 
     // ******************* Sidebar User ***************************
 
+    // ******************* Sidebar User ***************************
+
     sidebarUserTitle1: "Control Panel",
     sidebarUserItem1: "Home",
     sidebarUserTitle2: "Account",
     sidebarUserItem2: "Courses",
-    sidebarUserItem3: "Log out",
-    sidebarUserItem4: "Ranking",
+    sidebarUserItem3: "Ranking",
+    sidebarUserItem4: "Transfer funds",
+    sidebarUserItem5: "Request Payment",
+    sidebarUserItem6: "Lux Travel",
+    sidebarUserItemLogOut: "Log Out",
+
+    // ******************* Sidebar User ***************************
 
     // ******************* Sidebar User ***************************
 
@@ -386,6 +435,8 @@ export const Translation = {
     userCoursesCardText: "Your progress is",
     userCoursesCardButton1: "Start Now",
     userCoursesCardButton2: "Go to full course",
+    userCoursesCardButton3: "Go Live",
+    userCoursesBadgeLive: "LIVE",
 
     // ******************* Courses User ***************************
 
@@ -429,6 +480,52 @@ export const Translation = {
     rankingTable4: "Incomes",
 
     // ******************* Rankings ***************************
+
+    // ******************* transfer ***************************
+    transferTitle: "Transfer of Funds",
+    transferCardBalance: "Wallet Balance",
+    transferCardBalanceDeposit: "Wallet Balance for Deposit",
+    transferTitleForm: "Request for transfer of funds",
+    transferSelect: "From",
+    transferInputAmount: "Amount",
+    transferInputUser: "Select User",
+    transferInputWallet: "USDT wallet address",
+    transferTextNote: "Note",
+    transferButton: "Send Request",
+
+    transferSwal1:"Error",
+    transferSwal2:"Please complete all fields.",
+    // ******************* transfer ***************************
+
+    // ******************* request ***************************
+    requestTitle: "Payment Request",
+    requestCardBalance: "Available Balance",
+    requestCardMinimum: "Minimum Withdrawal",
+    requestTitleForm: "Request Payment",
+    requestInputAmount: "Amount to Withdraw $",
+    requestSelectUser: "Currency Type",
+    requestButton: "Request",
+
+    requestSwal1:"Error",
+    requestSwal2:"Please complete all fields.",
+    // ******************* request ***************************
+
+    // ******************* travel ***************************
+
+    travelTitle: "Lux Travel",
+    travelText:
+      "At Lux we recognize your effort and we will reward you with the best experiences",
+    travelTitle2: "Next trip winners",
+    travelHeadTable1: "User",
+    travelHeadTable2: "Destination",
+    travelHeadTable3: "Date",
+
+    travelCardTitle: "Progress to qualify",
+    travelCardItem1: "Global Volume (GV):",
+    travelCardItem2: "Personal Volume (PV):",
+    travelCardItem3: "Range:",
+
+    // ******************* travel ***************************
   },
   fr: {
     // ******************* home ***************************
@@ -508,7 +605,7 @@ export const Translation = {
     membershipText2:
       "Rejoignez-nous alors que vous plongez dans un océan de connaissances et embarquez sur un chemin continu de découverte de soi et de croissance.",
 
-    basicTitle: "BASIQUE",
+    basicTitle: "BASIC",
     basicContent1: "Langues",
     basicContent2: "Trading",
 
@@ -529,8 +626,6 @@ export const Translation = {
     membershipButton: "acquérir",
     // memberships
 
- 
-
     // ******************* home ***************************
 
     // ******************* Login ***************************
@@ -548,12 +643,15 @@ export const Translation = {
 
     // ******************* Sidebar User ***************************
 
-    sidebarUserTitle1: "Panneau de contrôle",
+    sidebarUserTitle1: "Panneau de commande",
     sidebarUserItem1: "Début",
     sidebarUserTitle2: "Compte",
-    sidebarUserItem2: "Courses",
-    sidebarUserItem3: "Se déconnecter",
-    sidebarUserItem4: "Classement",
+    sidebarUserItem2: "Cours",
+    sidebarUserItem3: "Classement",
+    sidebarUserItem4: "Transfert de fonds",
+    sidebarUserItem5: "Demander un paiement",
+    sidebarUserItem6: "Lux Travel",
+    sidebarUserItemLogOut: "Fermer la session",
 
     // ******************* Sidebar User ***************************
 
@@ -598,6 +696,8 @@ export const Translation = {
     userCoursesCardText: "Votre progrès est",
     userCoursesCardButton1: "Démarrer maintenant",
     userCoursesCardButton2: "Aller tout au long du cours",
+    userCoursesCardButton3: "Aller au Live",
+    userCoursesBadgeLive: "EN DIRECT",
 
     // ******************* Courses User ***************************
 
@@ -641,5 +741,51 @@ export const Translation = {
     rankingTable4: "Les revenus",
 
     // ******************* Rankings ***************************
+
+    // ******************* transfer ***************************
+    transferTitle: "Transfert de fonds",
+    transferCardBalance: "Le solde du billet",
+    transferCardBalanceDeposit: "Le solde de la billetterie pour dépôt",
+    transferTitleForm: "Demande de transfert de fonds",
+    transferSelect: "Depuis",
+    transferInputAmount: "Monto",
+    transferInputUser: "Sélectionner utilisateur",
+    transferInputWallet: "Adresse de portefeuille USDT",
+    transferTextNote: "Note",
+    transferButton: "Envoyer la demande",
+
+    transferSwal1:"Erreur",
+    transferSwal2:"Veuillez remplir tous les champs.",
+    // ******************* transfer ***************************
+
+    // ******************* request ***************************
+    requestTitle: "Demande de paiement",
+    requestCardBalance: "Salaire disponible",
+    requestCardMinimum: "Retrait minimum",
+    requestTitleForm: "Demander le paiement",
+    requestInputAmount: "Montois à retirer $",
+    requestSelectUser: "Type de monnaie",
+    requestButton: "Demander",
+
+    requestSwal1:"Erreur",
+    requestSwal2:"Veuillez remplir tous les champs.",
+    // ******************* request ***************************
+
+    // ******************* travel ***************************
+
+    travelTitle: "Lux Travel",
+    travelText:
+      "Chez Lux, nous reconnaissons vos efforts et vous récompenserons avec les meilleures expériences",
+    travelTitle2: "Les gagnants du prochain voyage",
+    travelHeadTable1: "Utilisateur",
+    travelHeadTable2: "Destinée",
+    travelHeadTable3: "Date",
+
+    travelCardTitle: "Progrès pour qualifier",
+    travelCardItem1: "Volume mondial (GV):",
+    travelCardItem2: "Volume personnel (PV):",
+    travelCardItem3: "Rango:",
+
+    // ******************* travel ***************************
   },
 };

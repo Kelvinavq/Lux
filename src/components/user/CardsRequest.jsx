@@ -1,12 +1,18 @@
+import { useContext } from "react";
+import { LanguageContext } from "../home/LanguageContext";
+import { Translation } from "../../Translation";
+
 import usdtLogo from "../../assets/icons/tether-usdt-logo.svg";
 import "../../styles/request.css"
 
 export const CardsRequest = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <section className="container-cardsRequest">
 
       <div className="title">
-        <h2>Solicitud de Pago</h2>
+        <h2>{Translation[language].requestTitle}</h2>
       </div>
       <div className="cards">
         <div className="card">
@@ -23,7 +29,7 @@ export const CardsRequest = () => {
             </div>
 
             <div className="content-card">
-              <h2>Saldo Disponible</h2>
+              <h2>{Translation[language].requestCardBalance}</h2>
               <span>$ 145</span>
             </div>
           </div>
@@ -42,7 +48,7 @@ export const CardsRequest = () => {
             </div>
 
             <div className="content-card">
-              <h2>Retiro Mínimo</h2>
+              <h2>{Translation[language].requestCardMinimum}</h2>
               <span>$ 100</span>
             </div>
           </div>

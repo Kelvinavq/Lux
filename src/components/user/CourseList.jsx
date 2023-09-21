@@ -95,7 +95,7 @@ export const CourseList = () => {
                         course.statusLive === "active" ? "active" : ""
                       }`}
                     >
-                      <span>EN DIRECTO</span>
+                      <span>{Translation[language].userCoursesBadgeLive}</span>
                     </div>
                     <img src={course.image} alt="" />
                   </div>
@@ -132,7 +132,7 @@ export const CourseList = () => {
                     <button className={` ${
                         course.statusLive === "active" ? "active" : ""
                       }`}>
-                      Ir al Live
+                      {Translation[language].userCoursesCardButton3}
                     </button>
                   </div>
                 </div>

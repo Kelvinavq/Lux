@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { LanguageContext } from "../home/LanguageContext";
+import { Translation } from "../../Translation";
+
 import swal from "sweetalert";
 import "../../styles/request.css";
 
 export const FormRequest = () => {
+
+  const { language } = useContext(LanguageContext);
+
 
   const [formData, setFormData] = useState({
     amount: "",
@@ -24,7 +30,8 @@ export const FormRequest = () => {
       formData.amount === "" ||
       formData.coin === ""
     ) {
-      swal("Error", "Por favor, complete todos los campos.", "error");
+      swal(Translation[language].requestSwal1,
+        Translation[language].requestSwal2, "error");
       return;
     } else {
       console.log("Formulario enviado con éxito:", formData);
@@ -34,7 +41,7 @@ export const FormRequest = () => {
     <>
       <section className="formRequest">
         <div className="title">
-          <h2>Solicitar Pago</h2>
+          <h2>{Translation[language].requestTitleForm}</h2>
         </div>
 
         <form action="" onSubmit={handleSubmit}>
@@ -46,7 +53,7 @@ export const FormRequest = () => {
                 autoComplete="off"
                 value={formData.amount}
                 onChange={handleInputChange}
-                placeholder="Monto a Retirar $"
+                placeholder={Translation[language].requestInputAmount}
               />
             </div>
 
@@ -56,13 +63,13 @@ export const FormRequest = () => {
                 value={formData.coin}
                 onChange={handleInputChange}
               >
-                <option value="">Tipo de moneda</option>
+                <option value="">{Translation[language].requestSelectUser}</option>
               </select>
             </div>
           </div>
 
           <div className="btn-input">
-            <input type="submit" value="Solicitar" />
+            <input type="submit" value={Translation[language].requestButton} />
           </div>
         </form>
       </section>

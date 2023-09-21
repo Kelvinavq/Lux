@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { LanguageContext } from "../home/LanguageContext";
+import { Translation } from "../../Translation";
 import swal from "sweetalert";
 
 import "../../styles/transfer.css";
 
 export const FormTransfer = () => {
+  const { language } = useContext(LanguageContext);
+
   const [formData, setFormData] = useState({
     desde: "desde",
     amount: "",
@@ -31,7 +35,11 @@ export const FormTransfer = () => {
       formData.wallet === "" ||
       formData.note === ""
     ) {
-      swal("Error", "Por favor, complete todos los campos.", "error");
+      swal(
+        Translation[language].transferSwal1,
+        Translation[language].transferSwal2,
+        "error"
+      );
       return;
     } else {
       console.log("Formulario enviado con éxito:", formData);
@@ -42,7 +50,7 @@ export const FormTransfer = () => {
     <>
       <section className="formTransfer">
         <div className="title">
-          <h2>Solicitud de transferencia de fondos</h2>
+          <h2>{Translation[language].transferTitleForm}</h2>
         </div>
 
         <form action="" onSubmit={handleSubmit}>
@@ -53,7 +61,9 @@ export const FormTransfer = () => {
                 value={formData.desde}
                 onChange={handleInputChange}
               >
-                <option value="desde">Desde</option>
+                <option value="desde">
+                  {Translation[language].transferSelect}
+                </option>
               </select>
             </div>
 
@@ -64,7 +74,7 @@ export const FormTransfer = () => {
                 autoComplete="off"
                 value={formData.amount}
                 onChange={handleInputChange}
-                placeholder="Monto"
+                placeholder={Translation[language].transferInputAmount}
               />
             </div>
 
@@ -74,7 +84,9 @@ export const FormTransfer = () => {
                 value={formData.user}
                 onChange={handleInputChange}
               >
-                <option value="">Seleccionar Usuario</option>
+                <option value="">
+                  {Translation[language].transferInputUser}
+                </option>
               </select>
             </div>
           </div>
@@ -86,7 +98,7 @@ export const FormTransfer = () => {
                 name="wallet"
                 value={formData.wallet}
                 onChange={handleInputChange}
-                placeholder="Dirección de billetera USDT"
+                placeholder={Translation[language].transferInputWallet}
               />
             </div>
 
@@ -107,13 +119,13 @@ export const FormTransfer = () => {
                 name="note"
                 value={formData.note}
                 onChange={handleInputChange}
-                placeholder="Nota"
+                placeholder={Translation[language].transferTextNote}
               />
             </div>
           </div>
 
           <div className="btn-input">
-            <input type="submit" value="Enviar Solicitud" />
+            <input type="submit" value={Translation[language].transferButton} />
           </div>
         </form>
       </section>

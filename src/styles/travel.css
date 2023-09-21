@@ -1,17 +1,87 @@
-.container-banner{
-    width: 95%;
+.container-banner {
+  width: 95%;
 }
 
-
-.container-banner .head strong{
-    color: var(--morado);
+.container-banner .head strong {
+  color: var(--morado);
 }
 
-.container-banner .banner{
-    aspect-ratio: 2 /1;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 30px;
+.container-banner .banner {
+  aspect-ratio: 2 /1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
 }
 
+.container-banner .container-table {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  place-items: center;
+}
+
+.container-banner .stats {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.container-banner .stats .title h2{
+  margin-bottom: -50px ;
+}
+
+.container-banner .stat {
+  background: var(--oscuro-dos);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border-radius: 20px;
+  padding: 15px 0;
+  margin-bottom: -50px;
+}
+
+.container-banner .stat .item {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-banner .stat .item span {
+  font-weight: bold;
+}
+
+.container-banner .stat .item p {
+  font-size: 0.9em;
+}
+
+@media (max-width: 1030px) {
+  .container-banner .container-table {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 930px) {
+  .container-banner .container-table {
+    grid-template-columns: 1fr;
+  }
+
+  .container-banner .stats {
+    width: 100%;
+  }
+
+  .container-banner .stats .title{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .container-banner .stat {
+    margin-bottom: 0;
+  }
+}
